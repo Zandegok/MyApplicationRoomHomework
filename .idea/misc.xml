@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jacks/Desktop/Programming/Kotlyn/MyApplicationRoomHomework/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jacks/Desktop/Programming/Kotlyn/MyApplicationRoomHomework/app/src/main/res/layout/note_view.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/jacks/Desktop/Programming/Kotlyn/MyApplicationRoomHomework/app/src/main/res/layout/record_view.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>

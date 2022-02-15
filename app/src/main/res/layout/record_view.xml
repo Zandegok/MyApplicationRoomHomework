@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.myapplicationroomhomework.controller.RvAdapterRecord.RecordViewHolder" />
+    </data>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextNoteName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.fieldPlayer}"
+            android:afterTextChanged="@{(view)->viewModel.update()}"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextNoteBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.fieldScore}"
+            android:afterTextChanged="@{(view)->viewModel.update()}"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonNoteDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)->viewModel.delete()}"
+            android:text="Удалить" />
+    </LinearLayout>
+</layout>

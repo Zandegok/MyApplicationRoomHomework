@@ -22,45 +22,38 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Key"
-            android:text="@={viewModel.fieldKey}" />
+            android:hint="Имя игрока"
+            android:text="@={viewModel.fieldPlayer}" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Value"
-            android:text="@={viewModel.fieldValue}" />
+            android:hint="Очки"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:text="@={viewModel.fieldScore}" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{(view)->viewModel.getByKey()}"
-            android:text="Get by key" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{(view)->viewModel.addKeyValuePair()}"
-            android:text="Add key value pair" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{(view)->viewModel.updateValueByKey()}"
-            android:text="Update value by key" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{(view)->viewModel.deleteByKey()}"
-            android:text="Delete by key" />
-
+            android:onClick="@{(view)->viewModel.addRecord()}"
+            android:text="Добавить" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{(view)->viewModel.deleteAll()}"
-            android:text="delete all" />
+            android:text="Удалить всё" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)->viewModel.updateAdapter()}"
+            android:text="Обновить данные" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:adapter="@{viewModel.adapter}"/>
     </LinearLayout>
 </layout>
